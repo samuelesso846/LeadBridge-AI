@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'mphflhluhfaqaweekexp.supabase.co',
       }
     ]
+  },
+  experimental: {
+    turbo: {
+      enabled: false
+    }
   }
 }
 module.exports = nextConfig
