@@ -367,7 +367,7 @@ export default function Dashboard() {
             <div style={{background:'#111827',border:'1px solid rgba(255,255,255,0.07)',borderRadius:16,display:'flex',flexDirection:'column',height:'calc(100vh - 200px)'}}>
               <div style={{flex:1,overflowY:'auto',padding:16,display:'flex',flexDirection:'column',gap:12}}>
                 {chatMessages.map((m,i) => (
-                  <div key={i} style={{maxWidth:'78%',padding:'12px 16px',borderRadius:16,fontSize:14,lineHeight:1.6,alignSelf:m.role==='user'?'flex-end':'flex-start',background:m.role==='user'?'linear-gradient(135deg,rgba(79,142,247,0.2),rgba(124,58,237,0.2))':'#161f2e',border:`1px solid ${m.role==='user'?'rgba(79,142,247,0.2)':'rgba(255,255,255,0.07)'}`,borderRadius:m.role==='user'?'16px 16px 4px 16px':'16px 16px 16px 4px'}}>
+                  <div key={i} style={{maxWidth:'78%',padding:'12px 16px',fontSize:14,lineHeight:1.6,alignSelf:m.role==='user'?'flex-end':'flex-start',background:m.role==='user'?'linear-gradient(135deg,rgba(79,142,247,0.2),rgba(124,58,237,0.2))':'#161f2e',border:`1px solid ${m.role==='user'?'rgba(79,142,247,0.2)':'rgba(255,255,255,0.07)'}`,borderRadius:m.role==='user'?'16px 16px 4px 16px':'16px 16px 16px 4px'}}>
                     {m.role==='assistant' && <div style={{fontSize:11,fontWeight:700,color:'#4f8ef7',marginBottom:4,textTransform:'uppercase'}}>🤖 IA Commerciale</div>}
                     <div style={{whiteSpace:'pre-wrap'}}>{m.content}</div>
                   </div>

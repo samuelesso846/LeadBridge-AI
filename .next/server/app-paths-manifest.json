@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/ai/chat/route": "app/api/ai/chat/route.js",
+  "/api/auth/linkedin/callback/route": "app/api/auth/linkedin/callback/route.js",
+  "/api/auth/linkedin/route": "app/api/auth/linkedin/route.js",
+  "/api/leads/route": "app/api/leads/route.js",
+  "/api/page/view/route": "app/api/page/view/route.js",
+  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/p/[slug]/page": "app/p/[slug]/page.js"
+}
