@@ -1,13 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
-// Client côté navigateur (utilisateur connecté)
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = typeof window !== 'undefined' 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null as any
 
-// Client côté serveur (accès admin)
 export const supabaseAdmin = createClient(
   supabaseUrl,
-  process.env.SUPABASE_SERVICE_KEY!
+  process.env.SUPABASE_SERVICE_KEY || ''
 )
